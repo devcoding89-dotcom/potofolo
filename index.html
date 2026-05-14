@@ -1623,7 +1623,7 @@
             /* project images */
             .proj-img-wrap {
                 width: 100%;
-                height: 180px;
+                height: 140px;
                 overflow: hidden;
                 margin-bottom: 20px;
                 border: 1px solid var(--border);
@@ -1652,8 +1652,57 @@
             }
 
             .proj-card.featured .proj-img-wrap {
-                height: 280px;
+                height: 220px;
                 margin-bottom: 0;
+            }
+
+            /* Team Section Styles */
+            .team-preview {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+                margin-top: 40px;
+            }
+            .tm-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 24px;
+                position: relative;
+                transition: all 0.3s;
+            }
+            .tm-card:hover {
+                border-color: var(--green);
+                box-shadow: 0 0 20px var(--glow);
+            }
+            .tm-photo {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 1px solid var(--green);
+                margin-bottom: 15px;
+            }
+            .tm-name {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 4px;
+            }
+            .tm-role {
+                font-family: 'Share Tech Mono', monospace;
+                font-size: 10px;
+                color: var(--cyan);
+                letter-spacing: 1px;
+                margin-bottom: 12px;
+            }
+            .tm-link {
+                display: inline-block;
+                margin-top: 15px;
+                font-family: 'Share Tech Mono', monospace;
+                font-size: 11px;
+                color: var(--green);
+                text-decoration: none;
+                border-bottom: 1px solid var(--green);
             }
 
             .hero-btns {
@@ -2199,10 +2248,36 @@
             </div>
         </section>
 
+        <!-- ── TEAM ── -->
+        <section id="team">
+            <div class="sec-head reveal">
+                <span class="sec-num">06</span>
+                <h2 class="sec-title">THE_TEAM</h2>
+                <div class="sec-line"></div>
+            </div>
+            <div class="team-preview">
+                <div class="tm-card reveal">
+                    <img src="https://plain-weur-prod-public.komododecks.com/202605/13/TRZL3dv9z9KSMaEb7syu/image.jpg" alt="Nosif I. M." class="tm-photo">
+                    <h3 class="tm-name">NOSIF I. M.</h3>
+                    <p class="tm-role">SOFTWARE ENGINEER / TEAM LEAD</p>
+                    <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Lead developer of Hikmah Hub. Specialized in building robust, scalable systems and complex community platforms.</p>
+                    <a href="team.html" class="tm-link">VIEW FULL PROFILE →</a>
+                </div>
+                
+                <div class="tm-card reveal">
+                    <div class="tm-photo" style="display: flex; align-items: center; justify-content: center; background: var(--bg2); border: 1px dashed var(--border);">?</div>
+                    <h3 class="tm-name">AGENT 002</h3>
+                    <p class="tm-role">PENDING CLASSIFICATION</p>
+                    <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Operative file is currently classified. Details will be disclosed upon clearance approval.</p>
+                    <a href="team.html" class="tm-link">SEE ROSTER →</a>
+                </div>
+            </div>
+        </section>
+
         <!-- ── EDUCATION ── -->
         <section id="education">
             <div class="sec-head reveal">
-                <span class="sec-num">06</span>
+                <span class="sec-num">07</span>
                 <h2 class="sec-title">EDUCATION</h2>
                 <div class="sec-line"></div>
             </div>
@@ -2246,7 +2321,7 @@
         <!-- ── CONTACT ── -->
         <section id="contact">
             <div class="sec-head reveal">
-                <span class="sec-num">07</span>
+                <span class="sec-num">08</span>
                 <h2 class="sec-title">CONTACT</h2>
                 <div class="sec-line"></div>
             </div>
