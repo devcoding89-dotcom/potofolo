@@ -1621,18 +1621,30 @@
             }
 
             /* project images */
-            .proj-img-wrap {
-                width: 100%;
-                height: 120px;
-                overflow: hidden;
-                margin-bottom: 20px;
+            .proj-card {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+                background: var(--surface);
                 border: 1px solid var(--border);
+                padding: 24px;
+                text-decoration: none;
+                transition: all .3s ease;
                 position: relative;
+                overflow: hidden;
+            }
+
+            .proj-img-wrap {
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+                overflow: hidden;
+                border: 1px solid var(--green);
                 background: rgba(0,0,0,0.3);
-                padding: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                border-radius: 4px; /* small rounded corners like a profile pic */
             }
 
             .proj-img {
@@ -1656,10 +1668,17 @@
                 pointer-events: none;
             }
 
+            .proj-card.featured {
+                grid-column: span 2;
+                flex-direction: row;
+                gap: 30px;
+                padding: 32px;
+            }
+
             .proj-card.featured .proj-img-wrap {
-                height: 200px;
-                margin-bottom: 0;
-                padding: 15px;
+                width: 120px;
+                height: 120px;
+                border-radius: 8px;
             }
 
             /* Team Section Styles */
@@ -2166,89 +2185,101 @@
                     <div class="proj-img-wrap">
                         <img src="assets/projects/project2.png" alt="CyberAK Designs" class="proj-img">
                     </div>
-                    <div class="proj-num">PROJECT_02</div>
-                    <div class="proj-title">CYBERAK DESIGNS</div>
-                    <div class="proj-desc">Full digital creative studio — gift websites, business sites, flyer design,
-                        and social media management.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">DIGITAL AGENCY</span>
-                        <span class="proj-tag">NETLIFY</span>
+                    <div>
+                        <div class="proj-num">PROJECT_02</div>
+                        <div class="proj-title">CYBERAK DESIGNS</div>
+                        <div class="proj-desc">Full digital creative studio — gift websites, business sites, flyer design,
+                            and social media management.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">DIGITAL AGENCY</span>
+                            <span class="proj-tag">NETLIFY</span>
+                        </div>
+                        <a href="https://cyberads.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                     </div>
-                    <a href="https://cyberads.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                 </div>
 
                 <div class="proj-card reveal">
                     <div class="proj-img-wrap">
                         <img src="assets/projects/project3.png" alt="Cyber Dev Portfolio" class="proj-img">
                     </div>
-                    <div class="proj-num">PROJECT_03</div>
-                    <div class="proj-title">CYBER DEV PORTFOLIO</div>
-                    <div class="proj-desc">Personal developer portfolio with a cyberpunk-inspired terminal boot
-                        sequence.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">PORTFOLIO</span>
-                        <span class="proj-tag">ANIMATIONS</span>
+                    <div>
+                        <div class="proj-num">PROJECT_03</div>
+                        <div class="proj-title">CYBER DEV PORTFOLIO</div>
+                        <div class="proj-desc">Personal developer portfolio with a cyberpunk-inspired terminal boot
+                            sequence.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">PORTFOLIO</span>
+                            <span class="proj-tag">ANIMATIONS</span>
+                        </div>
+                        <a href="https://cyberdevpotofolio.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                     </div>
-                    <a href="https://cyberdevpotofolio.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                 </div>
 
                 <div class="proj-card reveal">
                     <div class="proj-img-wrap">
                         <img src="assets/projects/project4.png" alt="Project Alpha" class="proj-img">
                     </div>
-                    <div class="proj-num">PROJECT_04</div>
-                    <div class="proj-title">PROJECT ALPHA</div>
-                    <div class="proj-desc">A custom web interface with interactive design elements and clean frontend
-                        architecture.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">WEB</span>
-                        <span class="proj-tag">INTERACTIVE</span>
+                    <div>
+                        <div class="proj-num">PROJECT_04</div>
+                        <div class="proj-title">PROJECT ALPHA</div>
+                        <div class="proj-desc">A custom web interface with interactive design elements and clean frontend
+                            architecture.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">WEB</span>
+                            <span class="proj-tag">INTERACTIVE</span>
+                        </div>
+                        <a href="https://spectacular-alfajores-30fa19.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                     </div>
-                    <a href="https://spectacular-alfajores-30fa19.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                 </div>
 
                 <div class="proj-card reveal">
                     <div class="proj-img-wrap">
                         <img src="assets/projects/project5.png" alt="Project Pika" class="proj-img">
                     </div>
-                    <div class="proj-num">PROJECT_05</div>
-                    <div class="proj-title">PROJECT PIKA</div>
-                    <div class="proj-desc">A live web application demonstrating component-based design thinking and
-                        clean execution.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">WEB</span>
-                        <span class="proj-tag">UI/UX</span>
+                    <div>
+                        <div class="proj-num">PROJECT_05</div>
+                        <div class="proj-title">PROJECT PIKA</div>
+                        <div class="proj-desc">A live web application demonstrating component-based design thinking and
+                            clean execution.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">WEB</span>
+                            <span class="proj-tag">UI/UX</span>
+                        </div>
+                        <a href="https://endearing-pika-ac080e.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                     </div>
-                    <a href="https://endearing-pika-ac080e.netlify.app" target="_blank" class="proj-link">VISIT PROJECT</a>
                 </div>
 
                 <div class="proj-card reveal">
                     <div class="proj-img-wrap">
                         <img src="assets/projects/project6.png" alt="Color Memory Master" class="proj-img">
                     </div>
-                    <div class="proj-num">PROJECT_06</div>
-                    <div class="proj-title">COLOR MEMORY MASTER</div>
-                    <div class="proj-desc">A beautiful, simple, and addictive color memory game to train your brain.</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">GAME</span>
-                        <span class="proj-tag">WEB APP</span>
+                    <div>
+                        <div class="proj-num">PROJECT_06</div>
+                        <div class="proj-title">COLOR MEMORY MASTER</div>
+                        <div class="proj-desc">A beautiful, simple, and addictive color memory game to train your brain.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">GAME</span>
+                            <span class="proj-tag">WEB APP</span>
+                        </div>
+                        <a href="https://color-memory-master-6c1f7.web.app/" target="_blank" class="proj-link">VISIT PROJECT</a>
                     </div>
-                    <a href="https://color-memory-master-6c1f7.web.app/" target="_blank" class="proj-link">VISIT PROJECT</a>
                 </div>
 
                 <div class="proj-card reveal">
                     <div class="proj-img-wrap">
                         <img src="assets/projects/project7.png" alt="Hikmah Hub" class="proj-img">
                     </div>
-                    <div style="position: absolute; top: 12px; right: 12px; font-family: 'Share Tech Mono', monospace; font-size: 8px; color: var(--cyan); background: rgba(0,255,255,0.1); border: 1px solid var(--cyan); padding: 2px 8px; letter-spacing: 1px;">TEAM PROJECT</div>
-                    <div class="proj-num">PROJECT_07</div>
-                    <div class="proj-title">HIKMAH HUB</div>
-                    <div class="proj-desc">A modern university community platform. (Lead: Nosif I. M.)</div>
-                    <div class="proj-tags">
-                        <span class="proj-tag">REACT</span>
-                        <span class="proj-tag">COMMUNITY</span>
+                    <div>
+                        <div style="position: absolute; top: 12px; right: 12px; font-family: 'Share Tech Mono', monospace; font-size: 8px; color: var(--cyan); background: rgba(0,255,255,0.1); border: 1px solid var(--cyan); padding: 2px 8px; letter-spacing: 1px;">TEAM PROJECT</div>
+                        <div class="proj-num">PROJECT_07</div>
+                        <div class="proj-title">HIKMAH HUB</div>
+                        <div class="proj-desc">A modern university community platform. (Lead: Nosif I. M.)</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">REACT</span>
+                            <span class="proj-tag">COMMUNITY</span>
+                        </div>
+                        <a href="https://hikmahhub.vercel.app/" target="_blank" class="proj-link">VISIT PROJECT</a>
                     </div>
-                    <a href="https://hikmahhub.vercel.app/" target="_blank" class="proj-link">VISIT PROJECT</a>
                 </div>
 
             </div>
